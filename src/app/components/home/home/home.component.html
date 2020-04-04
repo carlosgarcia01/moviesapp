@@ -1,4 +1,4 @@
-<h2>Premieres</h2>
+<!-- <h2>Premieres</h2>
 <div class="card-columns">
     <div class="card mt-3">
       <img src="../../../../assets/img/movie.png" class="card-img-top" alt="...">
@@ -8,3 +8,27 @@
       </div>
     </div>
   </div>
+Url imagen : https://image.tmdb.org/t/p/original/hujRiXcigsJ6X1RZUfkjgdwJgGe.jpg
+ -->
+
+
+ <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Movies App</h1>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati nemo reprehenderit nihil, cum atque doloremque!</p>
+  </div>
+</div>
+
+<div class="container">
+  <app-galery [movies]="billboard | slice:0:6"
+              title="Billboard">
+  </app-galery>
+
+  <app-galery [movies]="premieres | slice:0:6"
+              title="Premieres">
+  </app-galery>
+  <app-galery [movies]="infantile | slice:6:12"
+              title="Children's Movies">
+  </app-galery>
+  
+</div>

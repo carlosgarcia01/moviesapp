@@ -17,4 +17,10 @@ export class NavbarComponent implements OnInit {
   redirect(page:string){
     this.router.navigate([`/${page}`]);
   }
+
+
+  searchMovie(text:string){
+    if(text.length===0) return;
+    this.router.navigate(['/search',text]); 
+  }
 }

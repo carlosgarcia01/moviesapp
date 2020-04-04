@@ -4,14 +4,15 @@ import {ReactiveFormsModule} from '@angular/forms';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
-import { MovieComponent } from '../movie/movie.component';
-import { MoviesComponent } from '../movies/movies.component';
+
+import {MovieImagePipe} from '../../pipes/movie-image.pipe';
+import { GaleryComponent } from './galery/galery.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    MovieComponent,
-    MoviesComponent
+    MovieImagePipe,
+    GaleryComponent,
   ],
   imports: [
     CommonModule,
