@@ -12,6 +12,7 @@ import {ReactiveFormsModule  } from '@angular/forms';
 import { SearchComponent } from './components/search/search.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { ImagePipe } from './pipes/image.pipe';
+import { MovieInfoComponent } from './components/movie-info/movie-info.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ImagePipe } from './pipes/image.pipe';
     SearchComponent,
     MovieComponent,
     ImagePipe,
+    MovieInfoComponent,
   ], 
   imports: [
     BrowserModule,

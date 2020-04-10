@@ -2,35 +2,40 @@
 <h1>{{title}}</h1>
 <hr>
 <div class="row">
-    <div class="col-sm-6">
-      <div class="row animated fadeIn fast">
-        <div class="col-sm-12 div-pic-1"
-  
-          [ngStyle]="{'background-image':'url('+(movies[0] | movieImage)+')'}">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6 div-pic-2"
-            [ngStyle]="{'background-image':'url('+(movies[1] | movieImage)+')'}"
-        ></div>
-        <div class="col-sm-6 div-pic-2"
-            [ngStyle]="{'background-image':'url('+(movies[2] | movieImage)+')'}"
-        ></div>
+  <div class="col-sm-6">
+    <div class="row animated fadeIn fast">
+      <div class="col-sm-12 div-pic-1 puntero" [routerLink]="['/movie',movies[0].id,'home']"
+        [ngStyle]="{'background-image':'url('+(movies[0] | movieImage)+')'}">
+        <span class="badge badge-light">{{movies[0].original_title}}</span>
       </div>
     </div>
-    <div class="col-sm-6">
-      <div class="row">
-        <div class="col-sm-6 div-pic-2"
-            [ngStyle]="{'background-image':'url('+(movies[3] | movieImage)+')'}"
-        ></div>
-        <div class="col-sm-6 div-pic-2"
-            [ngStyle]="{'background-image':'url('+(movies[4] | movieImage)+')'}"
-        ></div>
+    <div class="row">
+      <div class="col-sm-6 div-pic-2 puntero" [routerLink]="['/movie',movies[1].id,'home']"
+        [ngStyle]="{'background-image':'url('+(movies[1] | movieImage)+')'}">
+        <span class="badge badge-light">{{movies[1].original_title}}</span>
       </div>
-      <div class="row">
-        <div class="col-sm-12 div-pic-1"
-          [ngStyle]="{'background-image':'url('+(movies[5] | movieImage)+')'}">
-        </div>
+      <div class="col-sm-6 div-pic-2 puntero" [routerLink]="['/movie',movies[2].id,'home']"
+        [ngStyle]="{'background-image':'url('+(movies[2] | movieImage)+')'}">
+        <span class="badge badge-light">{{movies[2].original_title}}</span>
       </div>
     </div>
   </div>
+  <div class="col-sm-6">
+    <div class="row">
+      <div class="col-sm-6 div-pic-2 puntero" [routerLink]="['/movie',movies[3].id,'home']"
+        [ngStyle]="{'background-image':'url('+(movies[3] | movieImage)+')'}">
+        <span class="badge badge-light">{{movies[3].original_title}}</span>
+      </div>
+      <div class="col-sm-6 div-pic-2 puntero" [routerLink]="['/movie',movies[4].id,'home']"
+        [ngStyle]="{'background-image':'url('+(movies[4] | movieImage)+')'}">
+        <span class="badge badge-light">{{movies[4].original_title}}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 div-pic-1 puntero" [routerLink]="['/movie',movies[5].id,'home']"
+        [ngStyle]="{'background-image':'url('+(movies[5] | movieImage)+')'}">
+        <span class="badge badge-light">{{movies[5].original_title}}</span>
+      </div>
+    </div>
+  </div>
+</div>

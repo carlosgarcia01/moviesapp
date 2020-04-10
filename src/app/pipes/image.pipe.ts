@@ -7,7 +7,10 @@ export class ImagePipe implements PipeTransform {
 
   private url:string ="https://image.tmdb.org/t/p/w500";
 
-  transform(movie:any):any {
+  transform(movie:any,poster:boolean=false):any {
+    if(poster && movie)
+    return this.url+movie.poster_path;
+
     if(!movie)
     return `assets/img/no-image.png`;
     else{

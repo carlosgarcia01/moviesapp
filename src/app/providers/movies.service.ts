@@ -60,6 +60,17 @@ export class MoviesService {
 
   }
 
+  getMovie(id:string){
+    let url = `${this.urlMoviedb}movie/${id}?api_key=${this.api_key}&language=es`;
+    return this.http.get(url)
+      .pipe(
+        map((res:any)=>{
+          console.log(res)
+          return res
+        })
+      )
+  }
+
 
 
   private createHeaders() {
